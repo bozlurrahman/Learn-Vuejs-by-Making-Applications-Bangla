@@ -5,7 +5,7 @@
     <div class="container">
     <div class="row">
       <div class="col-sm-9">
-        <inventory :items="items"></inventory>
+        <inventory @newItemAdded="addCartItems" :items="items"></inventory>
       </div>
       <div class="col-sm-3">
         <cart :items="cart"></cart>
@@ -42,6 +42,11 @@ export default {
   mounted() {
     this.items = data;
     // console.log(data);
+  },
+  methods: {
+    addCartItems(item) {
+      this.cart.push(item);
+    }
   }
 }
 </script>
