@@ -1,4 +1,4 @@
-[{
+export default [{
   "id": 1,
   "title": "Toyota",
   "photo": "http://dummyimage.com/221x186.png/ff4444/ffffff",
@@ -598,4 +598,4 @@
   "photo": "http://dummyimage.com/100x100.png/dddddd/000000",
   "email": "rconneely2r@fastcompany.com",
   "price": "$8.24"
-}]
+}];
