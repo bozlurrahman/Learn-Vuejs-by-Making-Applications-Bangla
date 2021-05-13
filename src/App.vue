@@ -5,7 +5,7 @@
     <div class="container">
     <div class="row">
       <div class="col-sm-9">
-        <inventory></inventory>
+        <inventory :items="items"></inventory>
       </div>
       <div class="col-sm-3">
         <cart></cart>
@@ -28,8 +28,14 @@ export default {
     Cart,
     Inventory
   },
+  data () {
+    return {
+      items: []
+    }
+  },
   mounted() {
-    console.log(data);
+    this.items = data;
+    // console.log(data);
   }
 }
 </script>
