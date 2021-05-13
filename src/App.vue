@@ -34,7 +34,7 @@ export default {
       cart: [{
         id: 1,
         title: 'test',
-        price: '$0.97',
+        price: '0.97',
         photo: 'http://dummyimage.com/100x100.png/ff4444/ffffff'
       }]
     }
