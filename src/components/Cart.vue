@@ -1,0 +1,26 @@
+<template>
+    <ul class="list-group">
+        <li class="list-group-item">
+        Item- price
+        </li>
+        <li class="list-group-item">
+        Item- price
+        </li>
+        <li class="list-group-item">
+        Item- price
+        </li>
+    </ul>
+</template>
+
+<script>
+export default {
+  data () {
+    return {}
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>
