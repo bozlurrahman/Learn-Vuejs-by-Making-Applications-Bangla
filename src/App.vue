@@ -5,7 +5,8 @@
     <div class="container">
     <div class="row">
       <div class="col-sm-9">
-        <inventory @newItemAdded="addCartItems" :items="items"></inventory>
+        <router-view></router-view>
+        <!-- <inventory @newItemAdded="addCartItems" :items="items"></inventory> -->
       </div>
       <div class="col-sm-3">
         <cart @itemRemoved="removeItem" :items="cart"></cart>
@@ -18,7 +19,7 @@
 <script>
 import Navbar from "./components/Navbar";
 import Cart from './components/Cart';
-import Inventory from "./components/Inventory";
+import Inventory from "./components/views/Inventory";
 import data from "./data";
 
 export default {
