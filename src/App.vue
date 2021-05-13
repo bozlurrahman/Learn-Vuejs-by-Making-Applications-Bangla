@@ -8,7 +8,7 @@
         <inventory :items="items"></inventory>
       </div>
       <div class="col-sm-3">
-        <cart></cart>
+        <cart :items="cart"></cart>
       </div>
     </div>
     </div>
@@ -30,7 +30,13 @@ export default {
   },
   data () {
     return {
-      items: []
+      items: [],
+      cart: [{
+        id: 1,
+        title: 'test',
+        price: '$0.97',
+        photo: 'http://dummyimage.com/100x100.png/ff4444/ffffff'
+      }]
     }
   },
   mounted() {
