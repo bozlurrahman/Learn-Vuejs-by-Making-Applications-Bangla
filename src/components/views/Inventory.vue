@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div v-if="!loading" class="row">
         <div v-for="(item, index) in items" :key="index" class="card" style="width: 15rem;">
             <img class="card-img-top" :src="item.photo" alt="Card image cap">
             <div class="card-body">
@@ -9,6 +9,9 @@
             </div>
         </div>
     </div>
+    <div v-else>
+        <h2>loading... </h2>
+    </div>
 </template>
 
 <script>
@@ -17,6 +20,7 @@ export default {
     // props: ['items'],
     data () {
         return {
+            loading: true,
             items: []
         }
     },
@@ -32,6 +36,7 @@ export default {
             axios.get('http://localhost:3000/items').then(response => {
                 console.log('res: ', response);
                 self.items = response.data;
+                self.loading = false;
             })
         }
     }
