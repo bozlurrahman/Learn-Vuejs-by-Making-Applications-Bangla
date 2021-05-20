@@ -12,14 +12,27 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-    props: ['items'],
+    // props: ['items'],
     data () {
-        return {}
+        return {
+            items: []
+        }
+    },
+    mounted() {
+        this.fetchInventory()
     },
     methods: {
         addToCart(item) {
             this.$emit('newItemAdded', item)
+        },
+        fetchInventory() {
+            var self = this;
+            axios.get('http://localhost:3000/items').then(response => {
+                console.log('res: ', response);
+                self.items = response.data;
+            })
         }
     }
 }
