@@ -27,7 +27,7 @@ export default {
     search() {
       var self= this;
       axios.get('http://localhost:3000/search/' + this.keyword ).then( response => {
-          self.item = response.data;
+          self.$store.commit('setInventory', response.data)
       })
       
     }
