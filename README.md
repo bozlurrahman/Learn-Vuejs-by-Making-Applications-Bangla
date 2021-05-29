@@ -1,6 +1,6 @@
 # superstore
 
-> A Vue.js project
+> A Vue.js project to manage inventory and cart. i learnt it from [udemy](https://www.udemy.com/course/learn-vuejs-by-making-applications-bangla-tutorial/learn/lecture/9152138)
 
 ## Build Setup
 
