@@ -25,5 +25,15 @@ export const storage = {
             state.cart = []
         }
 
+    },
+    // actions are used for async funtions
+    actions: {
+        // the addToCard action can be called by
+        // this.$store.dispatch("addToCart", item);
+        addToCart(context, payload) {
+            setTimeout(() => {
+                context.commit('addToCart', payload)
+            }, 1000);
+        }
     }
 }
